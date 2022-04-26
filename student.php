@@ -1,8 +1,8 @@
 <?php
-include_once("Exam.php");
-class student extends admin
+include_once("User1");
+class student extends User1
 {
-    public function FillAdmissionAorm()
+    public function FillAdmissionForm()
 {}
 
     public function ViewResult()
