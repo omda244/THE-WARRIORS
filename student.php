@@ -11,7 +11,7 @@ class student extends admin
     {}
     public function ViewAttendence()
     {}
-    private $solveexams_object=new exam();
+   public $solveexams_object=new exam;
 }
 
 ?>
