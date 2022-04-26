@@ -1,15 +1,12 @@
 <?php
-  class exam
+include_once("date.php");
+  class exam extends date
   {
-      private $examname;
       private $description;
       private $grade;
       private $duration;
-      private $date;
-     public function setexamname($examname)
-     {
-         $this->examname=$examname;
-     }
+     
+    
      
       public function setgrade($grade)
       {
@@ -23,16 +20,7 @@
       {
           $this->duration=$duration;
       }
-      public function setdate($date)
-      {
-          $this->date=$date;
-      }
-
-      public function getexamname()
-      {
-          return $this->examname;
-      }
-      public function getdescription()
+       public function getdescription()
       {
           return $this->description;
       }
@@ -44,9 +32,6 @@
       {
           return $this->duration;
       }
-      public function getdate()
-      {
-          return $this->date;
-      }
+      
   }
 ?>
