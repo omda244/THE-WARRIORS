@@ -1,17 +1,17 @@
 <?php
 include_once("User1");
+include_once("Exam.php");
 class student extends User1
 {
     public function FillAdmissionForm()
-{}
-
-    public function ViewResult()
     {}
-    public function ViewSchedule()
+    public function ViewResult($id)
     {}
-    public function ViewAttendence()
+    public function ViewSchedule($id)
     {}
-   public $solveexams_object=new exam;
+    public function ViewAttendence($id)
+    {}
+   public $solveexams_object=new Exam;
 }
 
 ?>
