@@ -1,9 +1,9 @@
 <?php
 
 
-class subjects{
+class subjects implements idisp{
 
-    public function display_subject()
+    public function display()
     {
         
     }

@@ -1,8 +1,8 @@
 <?php
 
-class classes 
+class classes implements idisp 
 {
-    function displayclass()
+    function display()
     {
         
     }
