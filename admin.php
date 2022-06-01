@@ -1,16 +1,19 @@
 <?php
-include_once("subjects.php");
-include_once("class.php");
-class admin extends subjects
+include_once("subject.php");
+include_once("room.php");
+include_once("user.php");
+include_once("student.php");
+include_once("teacher.php");
+class admin extends user
 {
     private $id ;
     private $name;
     private  $phone;
     private $addres;
     private $password;
-    public $subject_object = new subjects;
-    private $classobj=new classes();
-    public $l=new student;
+    public $subject_object;//obj
+    public $classobj;//obj
+    public $student;//obj
     function setsubobj( $subject_object)
     {
        $this->subject_object= $subject_object;
@@ -84,7 +87,8 @@ class admin extends subjects
     {
 
     }
-    public function add_new_student()
+    
+    public function add_new_student( )
     {
 
     }
@@ -115,7 +119,5 @@ class admin extends subjects
 }
 
 ?>
-
-
-
-
+ 
+  
