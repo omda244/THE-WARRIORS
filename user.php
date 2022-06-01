@@ -1,79 +1,88 @@
 <?php
-include 'connect.php';
-if(isset($_POST['submit']))
-{
-    $name=$_POST['name'];
-    $id=$_POST['id'];
-    $address=$_POST['address'];
-    $phone=$_POST['phone'];
-    $password=$_POST['password'];
-    $sql = "INSERT INTO crud (name ,id,address ,phone, password) VALUES ('$name', '$id', '$address','$phone','$password')";
-    $result=mysqli_query($con,$sql);
-    if($result)
+
+    class user1 implements iuser 
     {
-        header('location:diplay.php');
-    } 
-    else{
-        die(mysqli_error($con));
-    }
+        private $userId;
+        private $password;
+        private $addres;
+        private $phone;
+        public function Login(){
+
+        
+        } 
+        public function logout(){
+
+        
+        } 
+
+    	/**
+	 * 
+	 * @return mixed
+	 */
+	function getUserId() {
+		return $this->userId;
+	}
+	
+	/**
+	 * 
+	 * @param mixed $userId 
+	 * @return user1
+	 */
+	function setUserId($userId): self {
+		$this->userId = $userId;
+		return $this;
+	}
+	/**
+	 * 
+	 * @return mixed
+	 */
+	function getPassword() {
+		return $this->password;
+	}
+	
+	/**
+	 * 
+	 * @param mixed $password 
+	 * @return user1
+	 */
+	function setPassword($password): self {
+		$this->password = $password;
+		return $this;
+	}
+	/**
+	 * 
+	 * @return mixed
+	 */
+	function getAddres() {
+		return $this->addres;
+	}
+	
+	/**
+	 * 
+	 * @param mixed $addres 
+	 * @return user1
+	 */
+	function setAddres($addres): self {
+		$this->addres = $addres;
+		return $this;
+	}
+	/**
+	 * 
+	 * @return mixed
+	 */
+	function getPhone() {
+		return $this->phone;
+	}
+	
+	/**
+	 * 
+	 * @param mixed $phone 
+	 * @return user1
+	 */
+	function setPhone($phone): self {
+		$this->phone = $phone;
+		return $this;
+	}
 }
-
-?>
-
-
-
-
-
-
-
-
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
-    <title>CRUD OPRATION</title>
-  </head>
-  <body>
-  <div class="container">
-
-  
-      <form method="post">
-        <div >
-      
-    <label>NAME</label>
-    <input type="text" class="form-control"
-    placeholder="enter your name" name="name">
-     </div>
-                                <div>
-                        <label>ID</label>
-                        <input type="text" class="form-control"
-                        placeholder="enter your id" name="id">
-                    </div>
-                                    <div>
-                            <label>ADDRESS</label>
-                            <input type="text" class="form-control"
-                            placeholder="enter your address" name="address">
-                            </div>
-                    <div>
-                    <label>PHONE</label>
-                    <input type="text" class="form-control"
-                    placeholder="enter your phone no" name="phone">
-                    </div>
-    <div>
-    <label>password</label>
-    <input type="password" class="form-control"
-    placeholder="enter your password" name="password">
-    </div>
-  <button type="submit"  class="btn btn-primary" name="submit">Submit</button>
-    </form>
-</div>
-  </body>
-</html> 
 
 

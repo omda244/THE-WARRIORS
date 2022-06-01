@@ -1,6 +1,6 @@
 <?php
 
-class classes implements idisp 
+class room implements idisp 
 {
     private $classname;
     private $classid;
