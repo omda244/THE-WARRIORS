@@ -8,8 +8,9 @@ class admin extends subjects
     private  $phone;
     private $addres;
     private $password;
-    public $subject_object = new subjects();
+    public $subject_object = new subjects;
     private $classobj=new classes();
+    public $l=new student;
     function setsubobj( $subject_object)
     {
        $this->subject_object= $subject_object;
