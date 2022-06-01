@@ -1,6 +1,6 @@
 <?php
 
-    class user1 implements iuser 
+    class user implements iuser 
     {
         private $userId;
         private $password;
