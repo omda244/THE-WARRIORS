@@ -23,10 +23,7 @@
 body{
     background-color: #080710;
 }
-#registate
-{
 
-}
 .background{
     width: 430px;
     height: 520px;
@@ -59,7 +56,7 @@ body{
     bottom: -80px;
 }
 form{
-    height: 520px;
+    height: 600px;
     width: 400px;
     background-color: rgba(255,255,255,0.13);
     position: absolute;
@@ -139,6 +136,17 @@ button{
 .social i{
   margin-right: 4px;
 }
+.radio{
+    width=2px;
+    height=2px;
+}
+option{
+    background-color:black;
+    text-color:black;
+}
+select{
+    background-color:black;
+}
 
     </style>
 </head>
@@ -157,13 +165,22 @@ button{
 
         <label for="password">Password</label>
         <input type="password" name="Password" placeholder="Password" id="Password" >
+     	
+          <label for="Role">Select Role</label>
 
+<select name="Role" id="role">
+  <option id="option" value="Teacher">Teacher</option>
+  <option id="option" value="Student">Student</option>
+  <option  id="option" value="Admin">Admin</option>
+</select>
+
+<br>
+<br>
+<br>
         <button>Log In</button>
         <p><a href="RegisterationForm.php">Register</a></p>
-        
-	
-        
-    </form>
+</form>
+</form>
 </body>
 </html>
 

@@ -27,6 +27,7 @@ echo sha1("2");
 echo "<br>";
 echo md5("2");
 */
+include "Functions.php";
 include "UserFnc.php";
 session_start();
 if (!isset($_SESSION["Email"]))
