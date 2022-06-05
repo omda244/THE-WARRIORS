@@ -50,7 +50,7 @@ input[type=submit], input[type=reset]{
 
 <tr>
 <td>First Name</td>
-<td><input type="text" name="FirstName" maxlength="50" placeholder="Nermeen" />
+<td><input type="text" name="FirstName" maxlength="50" placeholder="Nermeen" required />
 </td>
 </tr>
 
@@ -58,7 +58,7 @@ input[type=submit], input[type=reset]{
 
 <tr>
 <td>Last Name</td>
-<td><input type="text" name="LastName" maxlength="50" placeholder="Mohammed"/>
+<td><input type="text" name="LastName" maxlength="50" placeholder="Mohammed" required/>
 </td>
 </tr>
 
@@ -74,7 +74,7 @@ input[type=submit], input[type=reset]{
 <tr>
 <td>Mobile Number</td>
 <td>
-<input type="text" name="MobileNumber" maxlength="11" placeholder="010xxxxxxx"/ required>
+<input type="text" name="MobileNumber" maxlength="11" placeholder="010xxxxxxx" required/>
 (11 Digits Allowed)
 </td>
 </tr>
@@ -84,9 +84,9 @@ input[type=submit], input[type=reset]{
 <tr>
 <td>Gender</td>
 <td>
-<input type="radio" name="Gender" value="Male" />
+<input type="radio" name="Gender" value="Male" required/>
 Male
-<input type="radio" name="Gender" value="Female" />
+<input type="radio" name="Gender" value="Female" required />
 Female
 </td>
 </tr>
@@ -96,8 +96,8 @@ Female
 <tr>
 <td>Date of Birth(DOB)</td>
 <td>
-<select name="BirthDay" id="Birthday_Day">
-<option value="-1">Day:</option>
+<select required name="BirthDay" id="Birthday_Day"  >
+<option >Day:</option>
 <option value="1">1</option>
 <option value="2">2</option>
 <option value="3">3</option>
@@ -130,8 +130,8 @@ Female
 <option value="30">30</option>
 <option value="31">31</option>
 </select>
-<select name="BirthdayMonth" id="Birthday_Month">
-<option value="-1">Month:</option>
+<select required name="BirthdayMonth" id="Birthday_Month" >
+<option >Month:</option>
 <option value="January">Jan(1)</option>
 <option value="February">Feb(2)</option>
 <option value="March">Mar(3)</option>
@@ -145,8 +145,8 @@ Female
 <option value="November">Nov(11)</option>
 <option value="December">Dec(12)</option>
 </select>
-<select name="BirthdayYear" id="Birthday_Year">
-<option value="-1">Year:</option>
+<select required name="BirthdayYear" id="Birthday_Year" >
+<option >Year:</option>
 <option value="2019">2019</option>
 <option value="2018">2018</option>
 <option value="2017">2017</option>
@@ -195,14 +195,14 @@ Female
 
 <tr>
 <td>Address<br /><br /><br /></td>
-<td><textarea name="Address" rows="10" cols="50"></textarea></td>
+<td><textarea name="Address" rows="10" cols="50" required></textarea></td>
 </tr>
 
 <!-------------------------- City ------------------------------------->
 
 <tr>
 <td>City</td>
-<td><input type="text" name="City" placeholder="Giza"/>
+<td><input type="text" name="City" placeholder="Giza" required/>
 </td>
 </tr>
 
@@ -210,7 +210,7 @@ Female
 
 <tr>
 <td>Father's Job</td>
-<td><input type="text" name="FatherJob"/>
+<td><input type="text" name="FatherJob" required/>
 </td>
 </tr>
 
@@ -218,7 +218,7 @@ Female
 
 <tr>
 <td>Mother's Job</td>
-<td><input type="text" name="MotherJob"/>
+<td><input type="text" name="MotherJob" required/>
 </td>
 </tr>
 
@@ -226,21 +226,21 @@ Female
 
 <tr>
 <td>Country</td>
-<td><input type="text" name="Country" placeholder="Egypt" /></td>
+<td><input type="text" name="Country" placeholder="Egypt" required/></td>
 </tr>
 
 <!------------------------------ Nationality --------------------------------->
 
 <tr>
 <td>Nationality</td>
-<td><input type="text" name="Nationality" placeholder="Algerian" /></td>
+<td><input type="text" name="Nationality" placeholder="Algerian" required /></td>
 </tr>
 
 <!------------------------------ Religion --------------------------------->
 
 <tr>
 <td>Religion</td>
-<td><input type="text" name="Religion" /></td>
+<td><input type="text" name="Religion" required /></td>
 </tr>
 
 
@@ -248,14 +248,13 @@ Female
 <tr>
 <td colspan="2" align="center">
     
-        <input type="submit" value="Submit"<a href="AdmissionForm.html"</a>>
+        <input type="submit" value="Submit"<a href="AdmissionForm.html"</a>
 
 
 <input type="reset" value="Reset">
 </td>
 </tr>
 </table>
-
 </body>
 </form>
 </html>
