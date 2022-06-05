@@ -29,7 +29,12 @@ function getUserById($Id)
 	$Result['Email']=$ArrayResult[1];
 	$Result['Password']=$ArrayResult[2];
 	$Result['FullName']=$ArrayResult[3];
-	$Result['DOB']=$ArrayResult[4];
+	$Result['BirthDay']=$ArrayResult[4];
+	$Result['BirthdayMonth']=$ArrayResult[5];
+	$Result['BirthdayYear']=$ArrayResult[6];
+	$Result['role']=$ArrayResult[7];
+
+
 	return $Result;
 }
 function getAllUsers()
@@ -57,12 +62,12 @@ function Login ($Email,$Password)
 		return false;
 	}
 }
-function addUser($Email,$Password,$FullName,$DOB)
+function addUser($Email,$Password,$FullName,$day,$month,$year,$role)
 {
 global $fileName;
 $id=getLastId($fileName,"~")+1;
-$record=$id."~".$Email."~".$Password."~".$FullName."~".$DOB;
-//echo $record;
+$record=$id."~".$Email."~".$Password."~".$FullName."~".$day."~".$month."~".$year."~".$role;
+echo $record;
 if (searchUser($fileName,$Email)==FALSE)
 {
 StoreRecord( $fileName,$record);	
