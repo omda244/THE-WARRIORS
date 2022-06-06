@@ -1,12 +1,14 @@
 <?php
-include_once "user1.php";
-class teacher extends user1{
+include_once "user.php";
+class teacher {
 
-public function setexam(){}
+public function setexam($nq){
+
+}
 public function recordattendanceforstudents($id){}
 public function correctexam(){ }
 public function setresult(){}
 
-public $object_user1 = new user1;
+
 }
 ?>
