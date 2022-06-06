@@ -55,6 +55,28 @@ function getRowById($fileName,$Separator,$id)
 	}
 	return False;
 }
+function getRowfordelete($fileName,$Separator,$id,$role)
+{
+	
+	if ( !file_exists($fileName) ) {
+       return 0;
+      }		
+	
+	$myfile = fopen($fileName, "r+") or die("Unable to open file!");
+	$LastId=0;
+	while(!feof($myfile)) 
+	{
+  		$line= fgets($myfile);
+  		$ArrayLine=explode($Separator,$line);
+  		
+  		if ($ArrayLine[0]==$id && $ArrayLine[7]==$role )
+  		{
+			return $line;	
+		}
+  		
+	}
+	return False;
+}
 
 
 function getLastId($fileName,$Separator)

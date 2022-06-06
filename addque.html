@@ -1,0 +1,17 @@
+<html>
+   <head> 
+      <meta name="viewport" content="width=device-width, initial-scale=1"> 
+   </head> 
+   <body> 
+      <div id="divSelections"></div> 
+      <script type="text/javascript">
+    function textBox(selections) {//from  w w  w .j  ava2  s . co m
+    for (var i=1; i <= selections; i++) {
+        document.getElementById('divSelections').innerHTML += '<input type="text" id="MytxBox' + i + '" name=""><br/>';
+    }
+}
+textBox(selections) ;
+
+      </script>
+   </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form action="addque.html" method="post"> 
+    <label for="a" id="a_text">Question number</label>
+    <input type="text" name="nfq" id="a" class="answer">
+    <button type="submit"> submit</button>
+
+
+    
+</form>
+<script>
+    function passvalue()
+    {
+        var nom=document.getElementById("text").value;
+        localStorage.setItem("textvalue".nom);
+        return false;
+    }
+</script>
+</body>
+</html>

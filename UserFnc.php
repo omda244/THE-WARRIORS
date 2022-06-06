@@ -1,10 +1,10 @@
 <?php
 include "Functions.php";
 $fileName="UsersFile.txt";
-function DeleteUser($id)
+function DeleteUser($id ,$role)
 {
 	global $fileName;
-	$r=getRowById($fileName,"~",$id);
+	$r=getRowfordelete($fileName,"~",$id,$role);
 	//echo $r;
 	//exit();
 	DeleteRecord($fileName,$r);
