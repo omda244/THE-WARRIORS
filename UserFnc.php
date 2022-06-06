@@ -9,10 +9,10 @@ function DeleteUser($id)
 	//exit();
 	DeleteRecord($fileName,$r);
 }
-function UpdateUser($id,$Email,$Password,$FullName,$DOB)
+function UpdateUser($id,$Email,$Password,$FullName,$day,$month,$year,$role)
 {
 	global $fileName;
-	$record=$id."~".$Email."~".$Password."~".$FullName."~".$DOB."\r\n";
+	$record=$id."~".$Email."~".$Password."~".$FullName."~".$day."~".$month."~".$year."~".$role."\r\n";
 	$r=getRowById($fileName,"~",$id);
 	//echo $record ."NEW <br>";
 	//echo $r ."NEW <br>";

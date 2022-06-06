@@ -4,6 +4,7 @@ include_once("room.php");
 include_once("user.php");
 include_once("student.php");
 include_once("teacher.php");
+
 class admin extends user
 {
     private $id ;
@@ -117,7 +118,9 @@ class admin extends user
 
     }
 }
-
 ?>
+<html>
+    <input type="text" name="name">
+    </html>
  
   
