@@ -4,7 +4,7 @@ class paycash implements ipay
 {
  public function pay()
  {
-    echo"cash";
+    echo"pay by cash";
  }
 }
 ?>

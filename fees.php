@@ -6,26 +6,22 @@ class fees
     public $amount;
     public $type;
     public $description;
-     public Ipay  $ipay;
+     public  $ipay;
      
-    public function __construct($student)
+    public function __construct(  $ipay)
     {
-        $this->student=$student;
+        $this->ipay=$ipay;
     
     }
-    public funtion addfee($ipay)
+
+     function paay()
     {
-      
+      return $this->ipay->pay();
     }
+   
+
     
-    public function editfees()
-    {
-
-    }
-    public function viewfees()
-    {
-
-    }
+   
 }
 
 ?>
