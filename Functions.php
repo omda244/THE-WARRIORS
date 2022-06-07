@@ -57,13 +57,7 @@ function getRowById($fileName,$Separator,$id)
 }
 function getRowfordelete($fileName,$Separator,$id,$role)
 {
-	
-	if ( !file_exists($fileName) ) {
-       return 0;
-      }		
-	
 	$myfile = fopen($fileName, "r+") or die("Unable to open file!");
-	$LastId=0;
 	while(!feof($myfile)) 
 	{
   		$line= fgets($myfile);
@@ -148,6 +142,26 @@ function SearhKeyword($fileName,$Search)
 	fclose($myfile);	
 	return $Result;
 	
+}
+function checklogin($fileName,$Email,$Separator,$Password,$role)
+{
+	$myfile = fopen($fileName, "r+") or die("Unable to open file!");
+	while(!feof($myfile)) 
+	{
+  		$line= fgets($myfile);
+  		$ArrayLine=explode($Separator,$line);
+		  if($ArrayLine[0])
+		  {
+			  if ($ArrayLine[1]==$Email && $ArrayLine[2]==$Password && $ArrayLine[7]==$role) 
+		  {
+			
+			return $line;
+		  }
+		  }
+  		
+	}
+	fclose($myfile);	
+	return FALSE;
 }
 function searchUser($fileName,$Search)
 {

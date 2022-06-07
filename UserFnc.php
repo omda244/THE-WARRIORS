@@ -5,7 +5,7 @@ function DeleteUser($id ,$role)
 {
 	global $fileName;
 	$r=getRowfordelete($fileName,"~",$id,$role);
-	//echo $r;
+	echo $r;
 	//exit();
 	DeleteRecord($fileName,$r);
 }
@@ -51,10 +51,11 @@ function getAllUsersByKeyWord($KeyWord)
 	//echo $R[0] ."Ayman";
 	return $R;
 }
-function Login ($Email,$Password)
+function Login ($Email,$Password,$role)
 {
+	$Separator="~";
 	global $fileName;
-	if (searchUser($fileName,$Email."~".$Password))
+	if (checklogin($fileName,$Email,$Separator,$Password,$role))
 	{
 		return true;
 	}
@@ -66,8 +67,7 @@ function addUser($Email,$Password,$FullName,$day,$month,$year,$role)
 {
 global $fileName;
 $id=getLastId($fileName,"~")+1;
-$record=$id."~".$Email."~".$Password."~".$FullName."~".$day."~".$month."~".$year."~".$role;
-echo $record;
+$record=$id."~".$Email."~".$Password."~".$FullName."~".$day."~".$month."~".$year."~".$role."~";
 if (searchUser($fileName,$Email)==FALSE)
 {
 StoreRecord( $fileName,$record);	

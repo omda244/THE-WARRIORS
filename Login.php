@@ -166,7 +166,7 @@ select{
         <label for="password">Password</label>
         <input type="password" name="Password" placeholder="Password" id="Password" >
      	
-          <label for="Role">Select Role</label>
+         <label for="Role">Select Role</label>
 
 <select name="Role" id="role">
   <option id="option" value="Teacher">Teacher</option>

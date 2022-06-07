@@ -2,16 +2,16 @@
 include "UserFnc.php";
 
 $pass=Encrypt($_REQUEST["Password"],2);
-
-if (Login($_POST["Email"],$pass))
+$role=$_REQUEST["Role"];
+if (Login($_POST["Email"],$pass,$role))
 {
-	echo "Success";
+	echo "<h2>Succesfully Logged In</h2>";
 	session_start();
 	
 	$_SESSION["Email"]=$_POST["Email"];
 }
 else
 {
-	echo "Incorrect Password Or Email";
+	echo "<h2>Incorrect Email Or Password Or Role</h2>";
 }
 ?>
