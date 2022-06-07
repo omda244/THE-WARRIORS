@@ -4,6 +4,17 @@
   	<form action="RegisterForm2.php" method="post">
 
 <head>
+  <script type="text/javascript">
+    function Validate() {
+        var password = document.getElementById("Password").value;
+        var confirmPassword = document.getElementById("ConfirmPassword").value;
+        if (password != confirmPassword) {
+            alert("Passwords do not match.");
+            return false;
+        }
+        return true;
+    }
+</script>
 <title>Registration</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -16,6 +27,7 @@
 <!-- //web font -->
 </head>
 <body>
+  <form onsubmit ="return verifyPassword()">
 	<!-- main -->
 	<div class="main-w3layouts wrapper">
 		<h1>Registration</h1>
@@ -25,8 +37,8 @@
 
 					<input class="text" type="text" name="FullName" placeholder="Full Name" required="">
 					<input class="text email" type="email" name="Email" placeholder="Email" required="">
-					<input class="text" type="password" name="Password" placeholder="Password" required="">
-					<input class="text w3lpass" type="password" name="Password" placeholder="Confirm Password" required="">
+					<input class="text" type="password" name="Password" id="Password" placeholder="Password" onkeyup='check();' required="">
+					<input class="text w3lpass" type="password" name="ConfirmPassword" id="ConfirmPassword" placeholder="Confirm Password" onkeyup='check();' required="">
           <input class="text" type="text" name="address" placeholder="address" required="">
           <br>
           <input class="text" type="text" name="phonenumber" placeholder="Phone Number" required="">
@@ -142,7 +154,7 @@
 						
 						<div class="clear"> </div>
 					</div>
-					<input type="submit" value="SIGNUP">
+					<input type="submit" value="SIGNUP" onclick="return Validate()">
 				
 				<p>Already have an Account? <a href="login.php"> Login Now!</a></p>
 			</div>
@@ -160,11 +172,13 @@
 			<li></li>
 		</ul>
 	</div>
+</form>
 	<!-- //main -->
 </body>
 </form>
 </html>
 <style>
+  
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, dl, dt, dd, ol, nav ul, nav li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
