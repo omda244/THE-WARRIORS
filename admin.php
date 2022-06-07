@@ -119,8 +119,5 @@ class admin extends user
     }
 }
 ?>
-<html>
-    <input type="text" name="name">
-    </html>
  
   
