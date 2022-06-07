@@ -7,8 +7,42 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
-    <!--Stylesheet-->
-    <style media="screen">
+</head>
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    
+	<form action="dologin.php" method="post">
+	
+        <h3>Login</h3>
+
+        <label for="Email">Email</label>
+        <input type="text" placeholder="Email or Phone" id="username" name="Email" >
+
+        <label for="password">Password</label>
+        <input type="password" name="Password" placeholder="Password" id="Password" >
+     	
+         <label for="Role">Select Role</label>
+
+<select name="Role" id="role">
+  <option id="option" value="Teacher">Teacher</option>
+  <option id="option" value="Student">Student</option>
+  <option  id="option" value="Admin">Admin</option>
+</select>
+
+<br>
+<br>
+<br>
+        <button>Log In</button>
+        <p><a href="RegisterationForm.html">Register</p>
+        <p></p>
+</form>
+</form>
+</body>
+ <!--Stylesheet-->
+ <style media="screen">
       *,
 *:before,
 *:after{
@@ -145,38 +179,4 @@ select{
 }
 
     </style>
-</head>
-<body>
-    <div class="background">
-        <div class="shape"></div>
-        <div class="shape"></div>
-    </div>
-    
-	<form action="dologin.php" method="post">
-	
-        <h3>Login</h3>
-
-        <label for="Email">Email</label>
-        <input type="text" placeholder="Email or Phone" id="username" name="Email" >
-
-        <label for="password">Password</label>
-        <input type="password" name="Password" placeholder="Password" id="Password" >
-     	
-         <label for="Role">Select Role</label>
-
-<select name="Role" id="role">
-  <option id="option" value="Teacher">Teacher</option>
-  <option id="option" value="Student">Student</option>
-  <option  id="option" value="Admin">Admin</option>
-</select>
-
-<br>
-<br>
-<br>
-        <button>Log In</button>
-        <p><a href="RegisterationForm.html">Register</p>
-        <p></p>
-</form>
-</form>
-</body>
 </html>
