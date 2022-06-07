@@ -74,7 +74,7 @@ class admin extends user
 
     public function login()
     {
-
+        
     }
     public function logout()
     {
