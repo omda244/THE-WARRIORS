@@ -20,4 +20,8 @@ $fileName="RecordAdmission.txt";
 $i=getLastId($fileName,"$Separator")+1;
 $record=$i."~".$FirstName."~".$LastName."~".$PersonalEmail."~".$MobileNumber."~".$Gender."~".$add."~".$City."~".$Country."~".$Nationality."~".$Religion."~".$FatherJob."~".$MotherJob."~".$Religion."~".$BirthDay."-".$BirthdayMonth."-".$BirthdayYear;
 StoreRecord($fileName,$record);
+echo "<script>
+alert('The Admission Order Successfully Sent');
+window.location.href='Studentinterface.html';
+</script>";
 ?>

@@ -8,15 +8,15 @@ if (Login($_POST["Email"],$pass,$role))
 	echo "<h2>Succesfully Logged In</h2>";
 	if($role=='Admin')
 	{
-		header('Location: updateuserinterface.html');
+		header('Location: Admininterface.html');
 	}
 	if($role=='Teacher')
 	{
-		header('Location: updateuserinterface.html');
+		header('Location: Teacherinterface.html');
 	}
 	if($role=='Student')
 	{
-		header('Location: updateuserinterface.html');
+		header('Location: Studentinterface.html');
 	}
 	
 	session_start();

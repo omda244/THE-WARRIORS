@@ -5,14 +5,12 @@ function DeleteUser($id ,$role)
 {
 	global $fileName;
 	$r=getRowfordelete($fileName,"~",$id,$role);
-	echo $r;
-	//exit();
 	DeleteRecord($fileName,$r);
 }
 function UpdateUser($id,$Email,$Password,$FullName,$day,$month,$year,$role)
 {
 	global $fileName;
-	$record=$id."~".$Email."~".$Password."~".$FullName."~".$day."~".$month."~".$year."~".$role."\r\n";
+	$record=$id."~".$Email."~".$Password."~".$FullName."~".$day."~".$month."~".$year."~".$role."~"."\r\n";
 	$r=getRowById($fileName,"~",$id);
 	//echo $record ."NEW <br>";
 	//echo $r ."NEW <br>";

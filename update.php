@@ -11,7 +11,10 @@ $modify=getUserById($id);
     $modify[6]=$_REQUEST["BirthdayYear"];
     $modify[7]=$_REQUEST["role"];
     UpdateUser( $modify[0], $modify[1], $modify[2], $modify[3], $modify[4], $modify[5], $modify[6], $modify[7]);
-echo"<h2>The Record Changed Successfully</h2>"
+    echo "<script>
+	alert('The Record Has Been Updated Succesfully');
+	window.location.href='Admininterface.html';
+	</script>";
 ?>
 
 
