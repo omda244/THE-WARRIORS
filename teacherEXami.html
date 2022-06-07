@@ -7,20 +7,21 @@
     <title>Document</title>
 </head>
 <body>
-<form action="addque.html" method="post"> 
+<form action="addque.html" method="get">
     <label for="a" id="a_text">Question number</label>
     <input type="text" name="nfq" id="a" class="answer">
-    <button type="submit"> submit</button>
+    <button onclick="passvalue()"> submit</button>
 
-
-    
 </form>
+    
+
 <script>
     function passvalue()
     {
-        var nom=document.getElementById("text").value;
+        var nom=document.getElementById("a").value;
         localStorage.setItem("textvalue".nom);
-        return false;
+        //document.write(nom);
+         return false;
     }
 </script>
 </body>
