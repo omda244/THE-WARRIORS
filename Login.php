@@ -1,7 +1,3 @@
-<?php
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -178,7 +174,8 @@ select{
 <br>
 <br>
         <button>Log In</button>
-        <p><a href="RegisterationForm.php">Register</a></p>
+        <p><a href="RegisterationForm.html">Register</p>
+        <p></p>
 </form>
 </form>
 </body>
