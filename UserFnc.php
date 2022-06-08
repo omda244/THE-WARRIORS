@@ -43,13 +43,6 @@ function getAllUsers()
 	return $R;
 }
 
-function getAllUsersByKeyWord($KeyWord)
-{
-	global $fileName;
-	$R=SearhKeyword($fileName,$KeyWord);
-	//echo $R[0] ."Ayman";
-	return $R;
-}
 function Login ($Email,$Password,$role)
 {
 	$Separator="~";
