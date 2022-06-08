@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <form action="deleteaction.php">
+    <form action="studentenroll.php">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,19 +9,42 @@
 </head>
 <body>
 
-    <tr>
-        <td>Course ID</td>
-        <td><input type="text" name="id"   required/>
-        </td>
-  </tr>
+   
   
-  <tr>
-    <td>Course Name</td>
-    <td><input type="text" name="role"   required/>
-    </td>
+
+   
+    <tr>
+        <td>Enrolling Student in Courses  </td>
+        <br>
+        <td>Student ID </td>
+        <td><input type="text" name="student id"   required/>
+        </td>
+        
+       
     </tr>
-    <td><input type="submit" value="Delete" name="update"  required/>
+    
+        <td>Courses  </td>
+        <br>
+        <br>
+   
+        <label for="c1">math106</label> 
+        <input type="checkbox" id="c1"name="math106">
+      
+        <label for="c1">Eng201</label>
+       <input type="checkbox" id="c2"name="Eng201">
+       <label for="c1">oop</label>
+       <input type="checkbox" id="c3"name="OOP">
+       <label for="c1">digital logic</label>
+       <input type="checkbox" id="c4"name="digital logic">
+       <label for="c1">linear algebra</label>
+       <input type="checkbox" id="c5"name="linear algebra">
+       
+ 
+      
+   
+    <td><input type="submit" name="Enrolling"   required/>
     </td>
+
 </form>
 </body>
 <style>

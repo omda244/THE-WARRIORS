@@ -1,76 +1,20 @@
 <?php
-include_once("subject.php");
-include_once("room.php");
-include_once("user.php");
-include_once("student.php");
-include_once("teacher.php");
 
-class admin extends user
+
+
+include_once "Userfnc.php";
+class admin 
 {
-    private $id ;
-    private $name;
-    private  $phone;
-    private $addres;
-    private $password;
-    public $subject_object;//obj
-    public $classobj;//obj
-    public $student;//obj
-    function setsubobj( $subject_object)
-    {
-       $this->subject_object= $subject_object;
-    }
-    function getsubobj()
-    {
-        return $this->subject_object;
-    }
-    function setclass( $classobj)
-    {
-       $this->sclassobj= $classobj;
-    }
-    function getclass()
-    {
-        return $this->classobj;
-    }
-    public function setid($id)
-    {
-        $this->id=$id;
-    }
-    public function getid($id)
-    {
-        return $this->id;
-    }
-    public function set_name($name)
-    {
-        $this->name=$name;
-    }
-    public function get_name($name)
-    {
-        return $this->name;
-    }
-    public function set_phone($phone)
-    {
-        $this->phone=$phone;
-    }
-    public function get_phone($phone)
-    {
-        return $this->phone;
-    }
-    public function set_addres($addres)
-    {
-        $this->addres=$addres;
-    }
-    public function get_addres($addres)
-    {
-        return $this->addres;
-    }
-    public function set_password($password)
-    {
-        $this->password=$password;
-    }
-    public function get_password($password)
-    {
-        return $this->password;
-    }
+   public $id ;
+   public $name;
+   public  $phone;
+   public $addres;
+   public $password;
+   public $role;
+   public$course;//obj
+   public$classobj;//obj
+   public$student;//obj
+    
 
     public function login()
     {
@@ -80,21 +24,16 @@ class admin extends user
     {
 
     }
-    public function add_new_teacher()
+  
+    public function deleteUser($pnn)
     {
+        $this->id=$pnn->id;
+        $this->role=$pnn->role;
+        
+        
+        DeleteUser($this->id , $this->role);
+        echo "<script>      alert('The user has been deleted succesfully');     window.location.href='Admininterface.html';     </script>";
 
-    }
-    public function delete_teacher()
-    {
-
-    }
-    
-    public function add_new_student( )
-    {
-
-    }
-    public function delete_student()
-    {
 
     }
     public function add_new_subject()

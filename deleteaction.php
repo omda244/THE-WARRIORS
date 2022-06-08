@@ -1,14 +1,17 @@
 <?php
-include "Userfnc.php";
+
+include_once"admin.php";
 $id=$_REQUEST["id"];
 $role=$_REQUEST["role"];
 
-DeleteUser($id , $role);
+$y=new admin();
+$y->id=$id;
+$y->role=$role;
+$y->deleteUser($y);
 
 
-    echo "<script>
-	alert('The User Deleted Succesfully');
-	window.location.href='Admininterface.html';
-	</script>";
+
+
+   
 
 ?>

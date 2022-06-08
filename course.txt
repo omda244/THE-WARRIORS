@@ -1,0 +1,5 @@
+1~math106
+2~Eng201
+3~OOP 
+4~digital logic
+5~linear algebra
