@@ -1,6 +1,7 @@
 <?php
 include "Functions.php";
 $fileName="UsersFile.txt";
+$fileName2="studentenrollment.txt";
 function DeleteUser($id ,$role)
 {
 	global $fileName;
@@ -78,5 +79,37 @@ else
 
 
 }
+
+function addenrollment($stdid,$cr)
+{
+global $fileName2;
+
+$c1=$cr[0];
+$c2=$cr[1];
+$c3=$cr[2];
+$c4=$cr[3];
+$c5=$cr[4];
+$id=getLastId($fileName2,"~")+1;
+
+	
+		$record=$id."~".$c1."~".$c2."~".$c3."~".$c4."~".$c5."~";
+	
+	
+
+
+if (searchUserbyid($fileName2,$stdid)==FALSE)
+{
+StoreRecord( $fileName2,$record);	
+return true;
+}
+else
+{
+	return FALSE;
+}
+
+
+}
+
+
 
 ?>

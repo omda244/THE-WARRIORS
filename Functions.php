@@ -181,4 +181,25 @@ function searchUser($fileName,$Search)
 	return FALSE;
 	
 }
+
+
+function searchUserbyid($fileName,$Search)
+{
+	$myfile = fopen($fileName, "r+") or die("Unable to open file!");
+	while(!feof($myfile)) 
+	{
+		$line=fgets($myfile);
+		$i=strpos($line, $Search);
+		
+  		if ($i>=0 && $i !=null)
+  		{
+  			
+			return $line;
+		}
+	}
+	fclose($myfile);	
+	return FALSE;
+	
+}
+
 ?>

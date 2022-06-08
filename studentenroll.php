@@ -1,23 +1,23 @@
 <?php
-include_once"courses.php";
-$c = array($c1=$_REQUEST["math106"], $c2=$_REQUEST["Eng201"],$c3=$_REQUEST["OOP"],$c4=$_REQUEST["digital logic"],$c5=$_REQUEST["linear algebra"]);
-$stid=$_REQUEST["student id"];
+include_once"Courses.php";
+include_once"student.php";
+$c1=$_REQUEST["math106"];
+$c2=$_REQUEST["Eng201"];
+$c3=$_REQUEST["OOP"];
+$c4=$_REQUEST["digitallogic"];
+$c5=$_REQUEST["linearalgebra"];
+$c = array($c1, $c2,$c3,$c4,$c5);
+$stid=$_REQUEST["studentid"];
 
 
  $y=new Courses();
 
-$y->student=$stid;
+$y->studentid=$stid;
 
-    
 
-//$y->enrollcourse($y,$c);
-if (isset($_POST['submit'])) {
-    if (!empty($_POST['math106'])) {
-        foreach ($_POST['math106'] as $value) {
-            echo "Chosen colour : ".$value.'<br/>';
-        }
-    }
-}
+
+$y->enrollcourse($y,$c);
+
 
 
 
