@@ -166,13 +166,9 @@ button{
 .social i{
   margin-right: 4px;
 }
-.radio{
-    width=2px;
-    height=2px;
-}
 option{
     background-color:black;
-    text-color:black;
+    color:white;
 }
 select{
     background-color:black;

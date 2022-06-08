@@ -20,18 +20,6 @@ function Decrypt($Word,$Key)
 	}
 	return $Result;
 }
-function ListAll($fileName)
-{
-	$myfile = fopen($fileName, "r+");
-	$i=0;
-	while(!feof($myfile)) 
-	{
-  		$line[$i]= fgets($myfile);
-  		$i++;
-  	}
-  	return $line;
-}
-
 
 function getRowById($fileName,$Separator,$id)
 {
@@ -120,29 +108,7 @@ function StoreRecord($fileName,$record)
 	fclose($myfile);
 }
 
-function SearhKeyword($fileName,$Search)
-{
-	$myfile = fopen($fileName, "r+") or die("Unable to open file!");
-	
-	$Result="";
-	$j=0;
-	while(!feof($myfile)) 
-	{
-		$line=fgets($myfile);
-		$i=strpos($line, $Search);
-		
-		if ($i>=0 && $i !=null)
-  		{
-  			$Result[$j]= $line;
-  			$j++;
-			
-  	
-		}
-	}
-	fclose($myfile);	
-	return $Result;
-	
-}
+
 function checklogin($fileName,$Email,$Separator,$Password,$role)
 {
 	$myfile = fopen($fileName, "r+") or die("Unable to open file!");
